@@ -1,4 +1,19 @@
 var opc = "";
+//Question template
+function qst(){
+    this.a = "";
+    this.b = "";
+    this.c = "";
+    this.d = "";
+    this.answer = "";
+    this.question ="";
+}
+
+
+
+
+
+
 
 
 function givenAnswer(){
