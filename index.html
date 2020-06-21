@@ -22,16 +22,16 @@
     </div>
     <div class="multiple-btn" id="answer-btns">
 
-        <input type="radio" class="radioOptions" name="options" id="opA" value="A"></input>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opA" value="A"></input>
         <label for="opA" id="lopA">Bob</label>
         <br>
-        <input type="radio" class="radioOptions" name="options" id="opB" value="B"></input>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opB" value="B"></input>
         <label for="opB" id="lopB">steve</label>
         <br>
-        <input type="radio" class="radioOptions" name="options" id="opC" value="C"></input>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opC" value="C"></input>
         <label for="opC" id="lopC">daniel</label>
         <br>
-        <input type="radio" class="radioOptions" name="options" id="opD" value="D"></input>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opD" value="D"></input>
         <label for="opD" id="lopD">john</label>
         <br>
         <button id="submit-btn" onclick="givenAnswer()">Submit</button>
