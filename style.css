@@ -1,0 +1,69 @@
+h1 {
+text-align: center;
+}
+
+p {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#start-btn-div {
+    text-align: center;    
+}
+
+#start-btn {
+    background-color: lightcoral;
+    border: none;
+    color: lightcyan;
+    font-size: 27px;
+    text-decoration: none;
+    padding: 13px;
+    
+}
+
+#highscores {
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    background-color: lightcoral;
+    padding: 5px;
+    font-size: 20px;
+    color: lightcyan;
+}
+
+#answer-btns {
+    text-align: center;
+}
+
+#a{
+    color: lightcyan;
+    background-color: lightcoral;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
+
+#b{
+    color: lightcyan;
+    background-color: lightcoral;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
+
+#c {
+    color: lightcyan;
+    background-color: lightcoral;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
+
+#d{
+    color: lightcyan;
+    background-color: lightcoral;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+}
