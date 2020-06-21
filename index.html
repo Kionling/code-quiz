@@ -11,21 +11,31 @@
 <div class="header">
             <button id="highscores">View highscores</button>
     </div>
-    <div class="container">
+    <div class="container" id="titles">
             <h1>Welcome!</h1>
             <p>To the code quiz!</p>
             <p>Here you will be quized on your understanding on all things coding!</p>
             <p>Good Luck!</p>
+    </div>
     <div class="btn-container" id="start-btn-div">
          <button id="start-btn">Begin</button>
     </div>
     <div class="multiple-btn" id="answer-btns">
-            <button id="a">A. </button>
-            <button id="b">B. </button>
-            <button id="c">C. </button>
-            <button id="d">D. </button>
+
+        <input type="radio" class="radioOptions" name="options" id="opA" value="A"></input>
+        <label for="opA" id="lopA">Bob</label>
+        <br>
+        <input type="radio" class="radioOptions" name="options" id="opB" value="B"></input>
+        <label for="opB" id="lopB">steve</label>
+        <br>
+        <input type="radio" class="radioOptions" name="options" id="opC" value="C"></input>
+        <label for="opC" id="lopC">daniel</label>
+        <br>
+        <input type="radio" class="radioOptions" name="options" id="opD" value="D"></input>
+        <label for="opD" id="lopD">john</label>
+        <br>
+        <button id="submit-btn" onclick="givenAnswer()">Submit</button>
     </div>
-</div>
         <script src="script.js"></script>
     </body>
 </html>
