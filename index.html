@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-<div class="header">
+<div id="count">
             <button id="highscores">View highscores</button>
+            <h1 id="time"><span id="timer"></span></h1>
+            <h2 id="gameOver"></h2>
     </div>
     <div class="container" id="titles">
             <h1>Welcome!</h1>
@@ -22,21 +24,21 @@
     </div>
     
     <div class="multiple-btn" id="answer-btns">
-        <p id="questionEL">bob question</p>
+        <p id="questionEL">This is going to be complicated.</p>
 
-        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opA" value="A"></input>
-        <label for="opA" id="lopA">Bob</label>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opA" value="a"></input>
+        <label for="opA" id="lopA">Are</label>
         <br>
-        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opB" value="B"></input>
-        <label for="opB" id="lopB">steve</label>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opB" value="b"></input>
+        <label for="opB" id="lopB">You</label>
         <br>
-        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opC" value="C"></input>
-        <label for="opC" id="lopC">daniel</label>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opC" value="c"></input>
+        <label for="opC" id="lopC">Ready</label>
         <br>
-        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opD" value="D"></input>
-        <label for="opD" id="lopD">john</label>
+        <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opD" value="d"></input>
+        <label for="opD" id="lopD">???</label>
         <br>
-        <button id="submit-btn" onclick="givenAnswer()">Submit</button>
+        <button id="submit-btn" onclick="givenAnswer()">Next</button>
     </div>
         <script src="script.js"></script>
     </body>

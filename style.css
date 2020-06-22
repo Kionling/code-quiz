@@ -2,6 +2,10 @@ h1 {
 text-align: center;
 }
 
+#gameOver {
+    text-align: center;
+}
+
 /*p {
     font-size: large;
     font-weight: bold;
