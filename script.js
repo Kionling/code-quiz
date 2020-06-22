@@ -10,23 +10,30 @@ var nxtQ = 1;
 var arrQ = [];
 var score = 0;
 var count = 5;
-var counter = setInterval(timer, 1000);
+var start = document.getElementById("start-btn");
+var interval;
+var timerDisplay = document.getElementById("timer");
+var totalSeconds = 60;
 
-function timer()
-{
-  count=count-1;
-  if (count < 0)
-  {
-     clearInterval(counter);
-     return;
-  }
-  if (count === 0){
-      document.getElementById("gameOver").innerHTML = "Sorry you have run out of time";
-      document.getElementById("time").style.color = "white";
-  }
+// var interval = setInterval(function(){
+//     document.getElementById('time').innerHTML=count;
+//     count--;
+//     if (count === 0){
+//       clearInterval(interval);
+//       document.getElementById('time').innerHTML='Done';
+//       // or...
+//       alert("You're out of time!");
+//     }
+//   }, 1000);
 
- document.getElementById("timer").innerHTML=count + " secs"; 
+function timer(){
+    interval = setInterval(function() {
+        totalSeconds--;
+    timerDisplay.textContent = totalSeconds + " seconds left";
+
+    },1000);
 }
+
 
 
 
@@ -48,6 +55,7 @@ q1.b = "Prevents HTML elements from deleting when accidentally hitting backspace
 q1.c ="Prevents the cat from losing weight";
 q1.d = "Prevents bootstrap columns from resetting ";
 q1.answer = "a";
+q1.wrongAnwer = 
 arrQ.push(q1);
 
 q2 = new qst();
@@ -87,6 +95,9 @@ q5.answer = "a";
 arrQ.push(q5);
 
 function scores(){
+    if (qst === answer) {
+
+    }
 }
 
 
@@ -139,3 +150,5 @@ function setOpc(op) {
     // alert(opc);
     
 }
+
+start.addEventListener("click", timer);
