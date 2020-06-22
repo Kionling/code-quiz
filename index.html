@@ -18,10 +18,11 @@
             <p>Good Luck!</p>
     </div>
     <div class="btn-container" id="start-btn-div">
-         <button id="start-btn">Begin</button>
+         <button onclick ="begin()" id="start-btn">Begin</button>
     </div>
-    <div class="questions" id="qst-container"></div>
+    
     <div class="multiple-btn" id="answer-btns">
+        <p id="questionEL">bob question</p>
 
         <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opA" value="A"></input>
         <label for="opA" id="lopA">Bob</label>

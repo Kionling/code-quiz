@@ -1,5 +1,17 @@
 var opc = "";
 //Question template
+var ea = document.getElementById("lopA");
+var eb = document.getElementById("lopB");
+var ec = document.getElementById("lopC");
+var ed = document.getElementById("lopD");
+var eq = document.getElementById("questionEL");
+
+
+
+
+
+
+
 function qst(){
     this.a = "";
     this.b = "";
@@ -8,7 +20,6 @@ function qst(){
     this.answer = "";
     this.question ="";
     this.userAnswer = "";
-    this.wrongAnswer = "";
 }
 // Quiz preparation
 q1 = new qst();
@@ -32,7 +43,7 @@ q3 = new qst();
 q3.question = "What are APIs user for?";
 q3.a ="";
 q3.b = "blue";
-q3.c ="baby blue";
+q3.c ="An API allows me to ";
 q3.d = "an API specifies how software components should interact.";
 q3.answer = "d";
 
@@ -42,15 +53,15 @@ q4.a ="Red";
 q4.b = "blue";
 q4.c ="baby blue";
 q4.d = "lightcoral";
-q4.answer = "c";
+q4.answer = "b";
 
 q5 = new qst();
-q5.question = "This is my favorite color";
+q5.question = "";
 q5.a ="Red";
 q5.b = "blue";
 q5.c ="baby blue";
 q5.d = "lightcoral";
-q5.answer = "c";
+q5.answer = "a";
 
 
 
