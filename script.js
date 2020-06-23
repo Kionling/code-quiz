@@ -15,6 +15,7 @@ var interval;
 var timerDisplay = document.getElementById("timer");
 var totalSeconds = 60;
 
+
 // var interval = setInterval(function(){
 //     document.getElementById('time').innerHTML=count;
 //     count--;
@@ -27,6 +28,7 @@ var totalSeconds = 60;
 //   }, 1000);
 
 function timer(){
+    start = document.getElementById("start-btn").style.display = "none";
     interval = setInterval(function() {
         totalSeconds--;
     if (totalSeconds >= 0){
@@ -71,14 +73,15 @@ function qst(){
 }
 // Quiz preparation
 q1 = new qst();
-q1.question = "What does event.preventDefault() do?";
-q1.a ="stops the default action of an element from happening.";
-q1.b = "Prevents HTML elements from deleting when accidentally hitting backspace.";
-q1.c ="Prevents the cat from losing weight";
-q1.d = "Prevents bootstrap columns from resetting ";
-q1.answer = "a";
-q1.wrongAnswer = 
+q1.question = "";
+q1.a ="";
+q1.b = "";
+q1.c ="";
+q1.d = "";
+q1.answer = "";
 arrQ.push(q1);
+
+
 
 q2 = new qst();
 q2.question = "What is Javascript?";
@@ -89,6 +92,7 @@ q2.d = "a general-purpose programming language created by Bjarne Stroustrup";
 q2.answer = "a";
 arrQ.push(q2);
 
+
 q3 = new qst();
 q3.question = "What are APIs user for?";
 q3.a ="An API allows me dictates how large the cache files can be";
@@ -97,6 +101,8 @@ q3.c ="An API allows me to change colors in a div";
 q3.d = "An API specifies how software components should interact";
 q3.answer = "d";
 arrQ.push(q3);
+
+
 
 q4 = new qst();
 q4.question = "Who created Javascript?";
@@ -107,6 +113,8 @@ q4.d = "Bruce Wayne";
 q4.answer = "b";
 arrQ.push(q4);
 
+
+
 q5 = new qst();
 q5.question = "Who created APIs";
 q5.a ="Roy Fielding";
@@ -116,10 +124,17 @@ q5.d = "Bjarne Stroustrup";
 q5.answer = "a";
 arrQ.push(q5);
 
-function scores(){
-    if (qst === answer) {
+q6 = new qst();
+q6.question = "What does event.preventDefault() do?";
+q6.a ="stops the default action of an element from happening.";
+q6.b = "Prevents HTML elements from deleting when accidentally hitting backspace.";
+q6.c ="Prevents the cat from losing weight";
+q6.d = "Prevents bootstrap columns from resetting ";
+q6.answer = "a";
+arrQ.push(q6);
 
-    }
+
+function scores(){
 }
 
 
@@ -130,22 +145,16 @@ function scores(){
 
 function givenAnswer(){
     nxtQ++;
-    if (nxtQ < 6){
+    if (nxtQ < 7){
         setQuestion(arrQ[nxtQ]);
     }
-    else {
-
-    }
-    
     //totalSeconds--;
     //timerDisplay.textContent = totalSeconds + " seconds left";
-    if (opc === q1.answer){
+    if ( opc === q1.answer && q2.answer && q3.answer && q4.answer && q5.answer){
         totalSeconds += 5;
-        //timerDisplay.textContent = totalSeconds + " seconds left";
     }
     else {
         totalSeconds -= 5;
-       // timerDisplay.textContent + " seconds left";
     }
     }
     // if (opc === q1.answer){
@@ -159,7 +168,6 @@ function givenAnswer(){
 
 function begin(){
     setQuestion(arrQ[nxtQ]);
-    document.getElementById("")
 
 }
 
@@ -184,3 +192,4 @@ function setOpc(op) {
 }
 
 start.addEventListener("click", timer);
+console.log(q1.question);
