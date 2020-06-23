@@ -15,6 +15,30 @@ text-align: center;
 #start-btn-div {
     text-align: center;    
 }
+#save-btn {
+    background-color: lightcoral;
+    border: none;
+    color: lightcyan;
+    font-size: 27px;
+    text-decoration: none;
+    padding: 13px;
+    
+}
+
+#end-container {
+    text-align: center;
+    display: none;
+}
+
+#end-btn {
+    background-color: lightcoral;
+    border: none;
+    color: lightcyan;
+    font-size: 27px;
+    text-decoration: none;
+    padding: 13px;
+    
+}
 
 #start-btn {
     background-color: lightcoral;
@@ -23,6 +47,7 @@ text-align: center;
     font-size: 27px;
     text-decoration: none;
     padding: 13px;
+
     
 }
 
