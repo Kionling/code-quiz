@@ -144,7 +144,6 @@ function scores(){
 
 
 function givenAnswer(){
-    
     if (nxtQ < 6){
         setQuestion(arrQ[nxtQ]);
     actualQ = arrQ[nxtQ];
@@ -159,8 +158,7 @@ function givenAnswer(){
     else {
         score++;
     }
-
-    // alert("user answer" + actualQ.userAnswer + "\n correct answer" + actualQ.answer);
+    alert("user answer" + actualQ.userAnswer + "\n correct answer" + actualQ.answer);
 
 }
 
@@ -194,6 +192,7 @@ function setQuestion(q){
     ec.innerHTML = q.c;
     ed.innerHTML = q.d;
     actualQ = q;
+    q.answer = actualQ.userAnswer;
 
 }
 
@@ -209,3 +208,45 @@ function setOpc(op) {
 }
 
 start.addEventListener("click", timer);
+
+function save(){
+    alert(localStorage.getItem("test"));
+    
+    //load all users in allus, when parse create an array;
+    var allus=localStorage.getItem("allusers");
+    if(allus==null){alert("allus not saved jet");allus="";}
+    else alert(allus);
+
+    auser=new user();//create a new template of user
+    alert(allus)
+  
+    auser.name=eusn.value;
+    auser.score=score;
+    auser.totalQuestions=arrQ.length;
+    auser.time=totalSeconds
+   //add auser to the exiting array of users...
+    
+    allus+="\n-----"+JSON.stringify(auser); 
+    //Save the the allusarray
+ //alert(allus)
+    localStorage.setItem("allusers",allus);
+    ///
+    alert(localStorage.getItem("allusers"))
+
+ /*      */
+}
+function getHighScore(){
+    var all=JSON.parse(localStorage.getItem("allusers"));
+    var ac=0;
+    var tus={};
+    for(var i=0;i<allus.length;i++){
+        var acc=allus[i].score*1;
+        if(acc>ac){
+             ac=acc;
+             tus=allus[i];
+        }
+        // returns the user with the highest score
+        return tus;
+
+}
+}
