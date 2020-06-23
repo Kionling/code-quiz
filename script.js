@@ -29,11 +29,33 @@ var totalSeconds = 60;
 function timer(){
     interval = setInterval(function() {
         totalSeconds--;
-    timerDisplay.textContent = totalSeconds + " seconds left";
-
+    if (totalSeconds >= 0){
+        timerDisplay.textContent = totalSeconds + " seconds left";
+    }
+    else {
+        clearInterval(interval);
+    }
     },1000);
 }
 
+/*
+function timer(){
+    interval = setInterval(function() {
+        totalSeconds--;
+    timerDisplay.textContent = totalSeconds + " seconds left";
+    if (opc === q1.answer){
+        totalSeconds += 5;
+        timerDisplay.textContent = totalSeconds + " seconds left";
+        console.log(timer);
+    if (opc === wrongAnswer) {
+        totalSeconds -= 5;
+        timerDisplay.textContent + " seconds left";
+    }
+    }
+    },1000);
+}
+
+*/
 
 
 
@@ -55,7 +77,7 @@ q1.b = "Prevents HTML elements from deleting when accidentally hitting backspace
 q1.c ="Prevents the cat from losing weight";
 q1.d = "Prevents bootstrap columns from resetting ";
 q1.answer = "a";
-q1.wrongAnwer = 
+q1.wrongAnswer = 
 arrQ.push(q1);
 
 q2 = new qst();
@@ -113,7 +135,18 @@ function givenAnswer(){
     }
     else {
 
-
+    }
+    
+    //totalSeconds--;
+    //timerDisplay.textContent = totalSeconds + " seconds left";
+    if (opc === q1.answer){
+        totalSeconds += 5;
+        //timerDisplay.textContent = totalSeconds + " seconds left";
+    }
+    else {
+        totalSeconds -= 5;
+       // timerDisplay.textContent + " seconds left";
+    }
     }
     // if (opc === q1.answer){
     //     alert("Correct!");
@@ -122,12 +155,11 @@ function givenAnswer(){
     // else {
     //     alert("Wrong!")
     // }
-}
+
 
 function begin(){
     setQuestion(arrQ[nxtQ]);
     document.getElementById("")
-
 
 }
 
