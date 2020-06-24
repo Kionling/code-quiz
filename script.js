@@ -67,7 +67,7 @@ function timer(){
     function user() {
         this.name = "";
         this.score = 0;
-        this.quizobj = [];
+        // this.quizobj = [];
         this.date = new Date();
         this.time=0;
         this.sscore=function(){return this.score+" out of "+this.totalQuestions};
@@ -276,6 +276,7 @@ var teTime = 0;
 
 for(var i=0;i<sar.length-1;i++){
     var te=JSON.parse(sar[i]);
+    alert(sar[i])
 // alert(te.score)
 // alert(te.name)
 // alert(te.time)
@@ -295,6 +296,7 @@ teTime = te.time;
     document.getElementById("pScores").innerHTML = "User Name: "+hiname+"<br> <br>High score :"+ hiscore+"<br><br>in a time of: " + teTime; 
 //     alert("nook");
 }
+
 function hideShow(){
     document.getElementById("showScores").style.display = "none";
     
