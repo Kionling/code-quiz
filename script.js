@@ -195,9 +195,9 @@ function begin() {
     document.getElementById("answer-btns").style.display = "block";
     if (typeof(Storage) !== "undefined") {
         // Store
-        if(localStorage.getItem("test")=="") alert("nada")
-        else alert(localStorage.getItem("test"))
-        localStorage.setItem("test",eusn.value);
+        // if(localStorage.getItem("test")=="") alert("Nothign in name.")
+        // else alert(localStorage.getItem("test"))
+        // localStorage.setItem("test",eusn.value);
         
          } else {
         alert("Sorry, your browser does not support Web Storage...");
@@ -234,8 +234,8 @@ function save(){
     
     //load all users in allus, when parse create an array;
     var allus=localStorage.getItem("allusers");
-    if(allus==null){alert("allus not saved yet");allus="";}
-    else alert(allus);
+    // if(allus==null){alert("allus not saved yet");allus="";}
+    // else alert(allus);
 
     auser=new user();//create a new template of user
    // alert(allus)
@@ -256,7 +256,7 @@ function save(){
  //alert(allus)
     localStorage.setItem("allusers",allus);
     ///
-    alert(localStorage.getItem("allusers"))
+   //    alert(localStorage.getItem("allusers"))
 
     //showobjs();
 
