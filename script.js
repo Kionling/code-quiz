@@ -275,8 +275,9 @@ var teTime = 0;
 
 
 for(var i=0;i<sar.length-1;i++){
+
     var te=JSON.parse(sar[i]);
-    alert(sar[i])
+    
 // alert(te.score)
 // alert(te.name)
 // alert(te.time)
