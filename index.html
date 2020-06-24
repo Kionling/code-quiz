@@ -9,19 +9,20 @@
     </head>
     <body>
 <div id="container">
-            <button id="highscores">View highscores</button>
+            <button onclick="showobjs()" id="highscores">View highscores</button>
             <h1 id="time"><span id="timer"></span></h1>
 </div>
 <div class="over-container" id="end-container">
             <h2 id="gameOver"></h2>
-            <button id="end-btn">Start over</button>
-            <button id="save-btn">Save</button>
+            <button onclick="startOver()"id="end-btn">Start over</button>
+            <button id="save-btn" onclick="save()">Save</button>
     </div>
     <div class="container" id="titles">
             <h1>Welcome!</h1>
             <p>To the code quiz!</p>
             <p>Here you will be quized on your understanding on all things coding!</p>
             <p>Good Luck!</p>
+            <input id="usn" type="=text" placeholder="Type Your Name Here">
     </div>
     <div class="btn-container" id="start-btn-div">
          <button onclick ="begin()" id="start-btn">Begin</button>
@@ -42,8 +43,21 @@
         <input onchange="setOpc(this.value)" type="radio" class="radioOptions" name="options" id="opD" value="d"></input>
         <label for="opD" id="lopD">???</label>
         <br>
-        <button id="submit-btn" onclick="givenAnswer()">Next</button>
+        <button id="submit-btn" onclick="subm()">Next</button>
     </div>
+    <br>
+
+   <!-- <div id="reset-container"> <button onclick="resetUsers()"id="reset-btn">Reset all</button></div> -->
+   <div id="showScores">
+       <p id="highest"></p>
+       <p id="pUsers"></p>
+       <p id="pScores"></p>
+       <br>
+       <br>
+       <button id="hideShowBtn" onclick="hideShow()">Hide</button>
+   </div>
+   <button onclick="resetUsers()"id="reset-btn">Reset all</button>
+   
         <script src="script.js"></script>
     </body>
 </html>
