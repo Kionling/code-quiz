@@ -246,20 +246,10 @@ function save(){
     auser.time=totalSeconds;
     var sobj=JSON.stringify(auser)
     allus+=sobj+"@";
-   //add auser to the exiting array of users...
 
-    //var u=[user.name,user.score,user.totalQuestions,user.time];
-    //allus+="@ "+u.toString();
-    
-   // allus+="\n-----"+user.name+"\nscore="+score; 
-    //Save the the allusarray
- //alert(allus)
     localStorage.setItem("allusers",allus);
-    ///
-   //    alert(localStorage.getItem("allusers"))
 
-    //showobjs();
-
+alert("Your progress has been saved.")
 
 }
 //try
@@ -278,16 +268,13 @@ for(var i=0;i<sar.length-1;i++){
 
     var te=JSON.parse(sar[i]);
     
-// alert(te.score)
-// alert(te.name)
-// alert(te.time)
-// alert(sar.length)
+
   if(hiscore<te.score) {
       hiscore=te.score;
       hiname=te.name;
-    //   alert(hiname + i);
+  
 teTime = te.time;
-   //alert(JSON.stringify(te));
+   
 
   }
 
